@@ -79,11 +79,11 @@
                     args = arguments;
                 
                 mw(req, res, function() {
-                    fx.apply(that, args);
+                    return fx.apply(that, args);
                 });
             };
             
-            ago.apply(this, arguments);
+            return ago.apply(this, arguments);
         };
         
         var apo = app.post;
@@ -96,11 +96,11 @@
                     args = arguments;
                 
                 mw(req, res, function() {
-                    fx.apply(that, args);
+                    return fx.apply(that, args);
                 });
             };
             
-            apo.apply(this, arguments);
+            return apo.apply(this, arguments);
         };
     };
 }));
