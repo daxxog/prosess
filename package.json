@@ -3,7 +3,7 @@
     "description" : "ProSessions.",
     "homepage"    : "https://github.com/daxxog/prosess",
     "main"        : "prosess.js",
-    "version"     : "0.0.2",
+    "version"     : "0.0.3",
     "engines": { "node" : ">=0.4.0" },
     "maintainers": [{
         "name"  : "David Volm",
@@ -16,7 +16,7 @@
     }],
     "dependencies": {
         "express" : "*",
-        "mhash" : "*",
+        "whirlpool" : "*",
         "mongodb" : "*"
     }
 }

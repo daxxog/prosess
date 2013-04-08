@@ -14,7 +14,7 @@
   }
 }(this, function() {
     var express = require('express'),
-        hash = require("mhash").hash,
+        whirlpool = require("whirlpool"),
         ObjectID = require('mongodb').ObjectID;
     
     return function(data) {
@@ -24,7 +24,7 @@
             secret = (typeof data.secret != 'undefined') ? data.secret : 'secret',
             ttl = (typeof data.ttl != 'undefined') ? data.ttl : 3600;
         
-        app.use(express.cookieParser(hash('whirlpool', secret)));
+        app.use(express.cookieParser(whirlpool(secret)));
         app.use(express.cookieSession({
             key: key
         }));
